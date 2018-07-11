@@ -1,0 +1,95 @@
+{
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": {
+    "description": "there are no TOS at this moment, use at your own risk we take no responsibility",
+    "title": "Documentation API ConsultaCurso",
+    "version": "0.0.1"
+  },
+  "host": "travaappcdc.magazineluiza.com.br",
+  "basePath": "/",
+  "paths": {
+    "/consultaCurso/{login}/{curso}/{idcurso}": {
+      "get": {
+        "description": "Se não for encontrado nem o usuário ou o curso, Error Not Found (404) será retornado.",
+        "summary": "Informa se o usuário passado por parametro concluiu o curso pesquisado.",
+        "operationId": "statusCurso",
+        "parameters": [
+          {
+            "type": "string",
+            "description": "username do colaborador",
+            "name": "login",
+            "in": "path",
+            "required": true
+          },
+          {
+            "type": "string",
+            "description": "id do curso na base de dados",
+            "name": "curso",
+            "in": "path",
+            "required": true
+          },
+          {
+            "type": "string",
+            "description": "chave do curso na api da crossknowledge",
+            "name": "idcurso",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/responses/consultaCurso"
+          },
+          "404": {
+            "$ref": "#/responses/notFound"
+          }
+        }
+      }
+    }
+  },
+  "responses": {
+    "retornoCurso": {
+      "headers": {
+        "conclusao": {
+          "type": "string",
+          "description": "Id do curso pesquisado"
+        },
+        "idcurso": {
+          "type": "string",
+          "description": "Campo referente ao username do colaborador"
+        },
+        "status": {
+          "type": "string",
+          "description": "Status de conclusao"
+        },
+        "statusCode": {
+          "type": "integer",
+          "format": "int64",
+          "description": "Status para acesso ao aplicativo"
+        }
+      }
+    }
+  },
+  "securityDefinitions": {
+    "Authorization": {
+      "type": "md5",
+      "name": "Authorization",
+      "in": "header"
+    }
+  },
+  "security": [
+    {
+      "Authorization": []
+    }
+  ]
+}

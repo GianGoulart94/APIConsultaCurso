@@ -1,0 +1,45 @@
+{
+	"ImportPath": "bitbucket.org/magazine-ondemand/trava-app-cdc",
+	"GoVersion": "go1.10",
+	"GodepVersion": "v80",
+	"Deps": [
+		{
+			"ImportPath": "github.com/gocraft/health",
+			"Rev": "8675af27fef0dc5c973d0957f1b1b50ffac513f9"
+		},
+		{
+			"ImportPath": "github.com/gocraft/health/stack",
+			"Rev": "8675af27fef0dc5c973d0957f1b1b50ffac513f9"
+		},
+		{
+			"ImportPath": "github.com/gorilla/mux",
+			"Comment": "v1.6.2-3-gcb46983",
+			"Rev": "cb4698366aa625048f3b815af6a0dea8aef9280a"
+		},
+		{
+			"ImportPath": "github.com/mattn/go-oci8",
+			"Rev": "b0e38e039e839a22d147a8415fad2f4592fdd1d7"
+		},
+		{
+			"ImportPath": "github.com/qodrorid/godaemon",
+			"Rev": "aeac1c057d1178d5d383936f06834ab06586be2a"
+		},
+		{
+			"ImportPath": "github.com/rs/cors",
+			"Comment": "v1.4.0-1-g694cf2a",
+			"Rev": "694cf2ad010fcf91ee35161f5bfdad8f42ed1b9a"
+		},
+		{
+			"ImportPath": "golang.org/x/crypto/bcrypt",
+			"Rev": "a49355c7e3f8fe157a85be2f77e6e269a0f89602"
+		},
+		{
+			"ImportPath": "golang.org/x/crypto/blowfish",
+			"Rev": "a49355c7e3f8fe157a85be2f77e6e269a0f89602"
+		},
+		{
+			"ImportPath": "golang.org/x/net/context",
+			"Rev": "db08ff08e8622530d9ed3a0e8ac279f6d4c02196"
+		}
+	]
+}
